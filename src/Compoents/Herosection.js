@@ -1,5 +1,6 @@
 import React from "react";
-import { ShieldLock } from "lucide-react"
+import { ShieldLock } from "lucide-react";
+import Header from "./Header";
 
 const content = [
     {
@@ -13,19 +14,25 @@ const content = [
 
 const Herosection = () => {
     return (
-        <div className=" ">
-            <section className="bg-primary min-h-screen">
+        <div className="min-h-screen flex items-center justify-center">
 
-                <div className="text-white text-4xl  pt-[16%] pl-[12%]" >
+            
+            <section className="bg-primary w-1/2 min-h-screen flex items-center justify-center">
+
+                <div className="text-white text-4xl">
 
                     {content.map((item) => (
                         <div key={item.id}>
 
-                            <div className=" pl-56 ">
-                                <p className=" flex  p-2   border  border-solid border-white rounded-xl  hover:bg-blue-600  w-fit">{item.icon}</p>
+                            <div className="pl-56">
+                                <p className="flex p-2 border border-solid border-white rounded-xl hover:bg-blue-600 w-fit">
+                                    {item.icon}
+                                </p>
                             </div>
 
-                            <p className=" font-bold text-5xl">{item.tittle}</p>
+                            <p className="font-bold text-5xl">
+                                {item.tittle}
+                            </p>
 
                             <p className="max-w-3xl font-serif pt-6">
                                 {item.description}
@@ -38,7 +45,11 @@ const Herosection = () => {
 
             </section>
 
-          
+            
+            <div className="w-1/2 flex items-center justify-center">
+                <Header />
+            </div>
+
         </div>
     );
 };

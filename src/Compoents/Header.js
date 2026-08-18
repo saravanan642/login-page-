@@ -3,10 +3,10 @@ import { User, Mail, Lock, ArrowRight } from 'lucide-react';
 
 const Header = () => {
     return (
-        <section className="flex flex-col items-center mt-28">
+        <section className="flex flex-col items-center  mt-28">
 
             <div className='  bg-blue-50/90 p-8 rounded-xl '>
-
+ 
                 <div className=' flex flex-col items-center'>
                     <div className="flex justify-center items-center border border-solid rounded-full w-16 h-16 hover:bg-blue-100">
                         <User size={35} />
@@ -36,7 +36,7 @@ const Header = () => {
                             <input
                                 type="text"
                                 placeholder="Jane Doe"
-                                className="border border-solid py-2 px-3  w-full mx-auto  rounded-md bg-[#faf9ff] pl-10"
+                                className="border border-solid py-2 px-3  w-full mx-auto  rounded-md pl-10"
                             />
                         </div>
                     </div>
@@ -53,7 +53,7 @@ const Header = () => {
                             <input
                                 type="email"
                                 placeholder="name@company.com"
-                                className="border border-solid py-2 px-3 w-full mx-auto rounded-md bg-[#faf9ff]  pl-10"
+                                className="border border-solid py-2 px-3 w-full mx-auto rounded-md  pl-10"
                             />
                         </div>
                     </div>
@@ -70,7 +70,7 @@ const Header = () => {
                             <input
                                 type="password"
                                 placeholder="••••••••"
-                                className="border border-solid   py-2 px-3 w-full mx-auto rounded-md bg-[#faf9ff] pl-10"
+                                className="border border-solid   py-2 px-3 w-full mx-auto rounded-md pl-10"
                             />
 
                         </div>
@@ -88,7 +88,7 @@ const Header = () => {
                             <input
                                 type="password"
                                 placeholder="••••••••"
-                                className="border border-solid py-2 px-3 rounded-md bg-[#faf9ff] w-full mx-auto pl-10"
+                                className="border border-solid py-2 px-3 rounded-md  w-full mx-auto pl-10"
                             />
 
                         </div>
