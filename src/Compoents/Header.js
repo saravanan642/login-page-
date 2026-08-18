@@ -1,48 +1,121 @@
-import React from "react";
-import { ShieldLock } from "lucide-react"
-
-const content = [
-    {
-        id: 1,
-        icon: <ShieldLock size={60} />,
-        tittle: "Secure Your Digital Workspace",
-        description:
-            "Join thousands of enterprise teams managing their core infrastructure with zero-trust security and modern simplicity",
-    },
-];
+import React from 'react'
+import { User, Mail, Lock, EyeOff,  ArrowRight  } from 'lucide-react';
 
 const Header = () => {
     return (
-        <div className=" ">
-            <section className="bg-primary min-h-screen">
+        <section>
 
-                <div className="text-secondary text-4xl  pt-[16%] pl-[12%]" >
+            <div className="flex justify-center items-center border border-solid rounded-full w-16 h-16 hover:bg-blue-100">
+                <User size={35} />
+            </div>
 
-                    {content.map((item) => (
-                        <div key={item.id}>
+            <p className="text-black font-bold text-5xl font-serif">
+                Create an Account
+            </p>
 
-                            <div className=" pl-56 ">
-                                <p className=" flex  p-2   border  border-solid border-white rounded-xl  hover:bg-blue-600  w-fit">{item.icon}</p>
-                            </div>
+            <p className="font-normal text-2xl mt-8">
+                Enter Your details to get started with Core.
+            </p>
 
-                            <p className=" font-bold text-5xl">{item.tittle}</p>
+            <form>
 
-                            <p className="max-w-3xl font-serif pt-6">
-                                {item.description}
-                            </p>
+                <div className="flex flex-col text-xl mt-4">
+                    <label className="font-bold">Full Name</label>
 
-                        </div>
-                    ))}
+                    <div className="relative">
+                        <User
+                            size={16}
+                            className="absolute left-2 top-1/2 -translate-y-1/2"
+                        />
 
+                        <input
+                            type="text"
+                            placeholder="Jane Doe"
+                            className="border border-solid w-64 h-8 px-8 rounded-md bg-[#faf9ff]"
+                        />
+                    </div>
                 </div>
 
-            </section>
+                <div className="flex flex-col text-xl mt-4">
+                    <label className="font-bold">Email Address</label>
 
-            <section>
-              
-            </section>
-        </div>
-    );
-};
+                    <div className="relative">
+                        <Mail
+                            size={16}
+                            className="absolute left-2 top-1/2 -translate-y-1/2"
+                        />
 
-export default Header;
+                        <input
+                            type="email"
+                            placeholder="name@company.com"
+                            className="border border-solid w-64 h-8 px-8 rounded-md bg-[#faf9ff]"
+                        />
+                    </div>
+                </div>
+
+                <div className="flex flex-col text-xl mt-4">
+                    <label className="font-bold">Password</label>
+
+                    <div className="relative">
+                        <Lock
+                            size={16}
+                            className="absolute left-2 top-1/2 -translate-y-1/2"
+                        />
+
+                        <input
+                            type="password"
+                            placeholder="••••••••"
+                            className="border border-solid w-64 h-8 px-8 rounded-md bg-[#faf9ff]"
+                        />
+
+                        <EyeOff
+                            size={18}
+                            className="absolute right-2 top-1/2 -translate-y-1/2"
+                        />
+                    </div>
+
+                    <p className="text-xs mt-1">
+                        Must be at least 8 characters.
+                    </p>
+                </div>
+
+                <div className="flex flex-col text-xl mt-4">
+                    <label className="font-bold">Confirm Password</label>
+
+                    <div className="relative">
+                        <Lock
+                            size={16}
+                            className="absolute left-2 top-1/2 -translate-y-1/2"
+                        />
+
+                        <input
+                            type="password"
+                            placeholder="••••••••"
+                            className="border border-solid w-64 h-8 px-8 rounded-md bg-[#faf9ff]"
+                        />
+
+                        <EyeOff
+                            size={18}
+                            className="absolute right-2 top-1/2 -translate-y-1/2"
+                        />
+                    </div>
+                </div>
+
+            </form>
+
+            <div className="flex items-center gap-2 text-xl">
+                <input type="checkbox" className="w-5 h-5" />
+                <label>I agree to the Terms & Conditions</label>
+            </div>
+
+            <button className='  flex  justify-center  border border-solid  font-bold p-2 w-[18%]' >
+                Create Account   <ArrowRight />
+            </button>
+
+           <p className=' text-xl'>Already  have an account ?</p>
+            
+        </section>
+    )
+}
+
+export default Header
